@@ -22,30 +22,5 @@
   
   
   
-  <entry>
-    <title>[Leetcode] No.1: Two Sum</title>
-    <link href="/leetcode/leetcode-no-1-two-sum.html"/>
-    <url>/leetcode/leetcode-no-1-two-sum.html</url>
-    
-    <content type="html"><![CDATA[<p>Give an array of integers <code>nums</code> and an integer<code>target</code> , return indices of the two numbers such that theyadd up to <code>target</code>.<br>You may assume that each input wouldhave <strong>exactly one solution</strong>, and you may not use the sameelement twice.<br>You can return the answer in any order.</p><p><strong>Example 1:</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">Input: nums = [2, 7, 11, 15], target = 9<br>Output: [0, 1]<br>Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].<br></code></pre></td></tr></table></figure><p><strong>Example 2:</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">Input: nums = [3, 2, 4], target = 6<br>Output: [1, 2]<br></code></pre></td></tr></table></figure><p><strong>Example 3:</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">Input: nums = [3, 3], target = 6<br>Output: [0, 1]<br></code></pre></td></tr></table></figure><p><strong>Constraints:</strong></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">· 2 &lt;= nums.length &lt;= 10^4<br>· -10^9 &lt;= nums[i] &lt;= 10^9<br>· -10^9 &lt;= target &lt;= 10^9<br>· Only one valid answer exists.<br></code></pre></td></tr></table></figure><p><strong>Follow-up:</strong> Can you come up with an algorithm that isless than <code>O(n^2)</code> time complexity?</p><h3 id="一暴力枚举">一：暴力枚举</h3><p>枚举数组中的每一个数 <code>x</code> ，并通过遍历数组查找是否存在<code>target - x</code> 。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target)</span> </span>&#123;<br>      <span class="hljs-type">int</span> len = nums.<span class="hljs-built_in">size</span>();<br>      <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; len; ++i) &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = i + <span class="hljs-number">1</span>; j &lt; len; ++j) &#123;<br>          <span class="hljs-keyword">if</span> (nums[i] + nums[j] == target) &#123;<br>            <span class="hljs-keyword">return</span> &#123;i, j&#125;;<br>          &#125;<br>        &#125;<br>      &#125;<br>      <span class="hljs-keyword">return</span> &#123;&#125;;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p><strong>复杂度分析</strong></p><p>时间复杂度为 <span class="math inline">\(\theta (N^2)\)</span>：其中<code>N</code>是数组中的元素数量。最坏情况下数组中任意两个数都要被匹配一次。</p><p>空间复杂度为 <span class="math inline">\(\theta (1)\)</span> 。</p><blockquote><p>vector</p></blockquote>]]></content>
-    
-    
-    <categories>
-      
-      <category>Leetcode</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Hot100[Leetcode]</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
   
 </search>
